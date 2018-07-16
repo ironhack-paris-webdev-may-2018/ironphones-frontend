@@ -6,6 +6,6 @@
     <p>by {{onePhone.brand}}</p>
     <img [src]="onePhone.image" />
     <br />
-    <a routerLink="/phone/999">See Product Info</a>
+    <a [routerLink]="['/phone', onePhone._id]">See Product Info</a>
   </li>
 </ul>

@@ -1,3 +1,33 @@
-<p>
-  add-phone-page works!
-</p>
+<h2>List Your Phone</h2>
+
+<p>Sell your phone for cash! 💰</p>
+
+<form (ngSubmit)="phoneSubmit()">
+  <label>
+    Brand:
+    <input [(ngModel)]="userForm.brand" name="brand" type="text" placeholder="Apple" />
+  </label>
+  <br />
+
+  <label>
+    Model:
+    <input [(ngModel)]="userForm.name" name="name" type="text" placeholder="iPhone X" />
+  </label>
+  <br />
+
+  <label>
+    Image URL:
+    <input [(ngModel)]="userForm.image" name="image" type="text" placeholder="http://example.com/iphone.png" />
+  </label>
+  <br />
+
+  <label>
+    Specs:
+    <input [(ngModel)]="userForm.specs[0]" name="specs0" type="text" placeholder="Face ID" />
+    <input [(ngModel)]="userForm.specs[1]" name="specs1" type="text" placeholder="Bigger Screen" />
+    <input [(ngModel)]="userForm.specs[2]" name="specs2" type="text" placeholder="Only 1150€" />
+  </label>
+  <br />
+
+  <button>Submit Phone</button>
+</form>

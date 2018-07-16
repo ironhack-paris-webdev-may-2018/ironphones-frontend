@@ -1,3 +1,23 @@
-<p>
-  phone-details-page works!
-</p>
+<h2>Phone Details</h2>
+
+<!-- Use ? when the object starts empty and is set later. -->
+<h3>{{phoneItem?.name}}</h3>
+
+<p>by <i>{{phoneItem?.brand}}</i></p>
+
+<img [src]="phoneItem?.image" />
+
+
+<h3>Specs</h3>
+
+<ul>
+  <li *ngFor="let oneSpec of phoneItem?.specs">
+    {{oneSpec}}
+  </li>
+</ul>
+
+<div>
+  <h3>Danger Zone</h3>
+
+  <button (click)="deleteClick()">Delete This Phone</button>
+</div>
