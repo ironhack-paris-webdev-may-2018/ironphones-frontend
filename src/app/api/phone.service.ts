@@ -16,7 +16,10 @@ export class PhoneService {
   getList() {
     // return the Promise of the request (component will ".then()" & ".catch()")
     return this.myHttpServ
-      .get(`${backendUrl}/api/phones`)
+      .get(
+        `${backendUrl}/api/phones`,
+        { withCredentials: true } // send cookies across domains
+      )
       .toPromise();
   }
 
@@ -24,7 +27,10 @@ export class PhoneService {
   getPhoneItem(id) {
     // return the Promise of the request (component will ".then()" & ".catch()")
     return this.myHttpServ
-      .get(`${backendUrl}/api/phone/${id}`)
+      .get(
+        `${backendUrl}/api/phone/${id}`,
+        { withCredentials: true } // send cookies across domains
+      )
       .toPromise();
   }
 
@@ -32,7 +38,10 @@ export class PhoneService {
   deletePhoneItem(id) {
     // return the Promise of the request (component will ".then()" & ".catch()")
     return this.myHttpServ
-      .delete(`${backendUrl}/api/phone/${id}`)
+      .delete(
+        `${backendUrl}/api/phone/${id}`,
+        { withCredentials: true } // send cookies across domains
+      )
       .toPromise();
   }
 
@@ -40,7 +49,11 @@ export class PhoneService {
   postPhone(phoneInfo: PhoneSubmission) {
     // return the Promise of the request (component will ".then()" & ".catch()")
     return this.myHttpServ
-      .post(`${backendUrl}/api/phones`, phoneInfo)
+      .post(
+        `${backendUrl}/api/phones`,
+        phoneInfo,
+        { withCredentials: true } // send cookies across domains
+      )
       .toPromise();
   }
 }

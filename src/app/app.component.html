@@ -4,7 +4,17 @@
   <nav>
     <a routerLink="/">Home</a>
     <a routerLink="/phones">Our Phones</a>
-    <a routerLink="/phone/add">List Your Phone</a>
+
+    <span *ngIf="!myAuthServ.currentUser">
+      <a routerLink="/signup">Sign Up</a>
+      <a routerLink="/login">Log In</a>
+    </span>
+
+    <span *ngIf="myAuthServ.currentUser">
+      <b>Welcome back, {{myAuthServ.currentUser.firstName}}!</b>
+      <a routerLink="/phone/add">List Your Phone</a>
+      <button (click)="logoutClick()">Log Out</button>
+    </span>
   </nav>
 </header>
 

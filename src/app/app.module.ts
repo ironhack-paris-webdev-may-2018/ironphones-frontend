@@ -10,6 +10,8 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
 import { PhoneListPageComponent } from './phone-list-page/phone-list-page.component';
 import { PhoneDetailsPageComponent } from './phone-details-page/phone-details-page.component';
 import { AddPhonePageComponent } from './add-phone-page/add-phone-page.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { AddPhonePageComponent } from './add-phone-page/add-phone-page.component
     NotFoundPageComponent,
     PhoneListPageComponent,
     PhoneDetailsPageComponent,
-    AddPhonePageComponent
+    AddPhonePageComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
